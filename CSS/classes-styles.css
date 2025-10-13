@@ -1,13 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Inter';
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+    margin: 0;
 }
 
 /* Navbar Styles */
 #header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -52,7 +56,7 @@ body {
     color: #B87A16;
 }
 
-#header img {
+.logo img {
     height: 5vh;
     margin-left: 2vw;
 }
@@ -60,4 +64,150 @@ body {
 #navbar a:hover,
 #navbar a.active {
     color: #EFEA4A;
+}
+h1, h2, h3, p {
+    margin-top: 0; 
+}
+section {
+    margin-bottom: 5em;
+    padding-top: 2em;
+    overflow: hidden;
+}
+/* Body Building Section Styles */
+#bodyBuilding {
+    background-color: #b5791a;
+    overflow: hidden;
+}
+.title {
+    margin-top: 0.4em;
+    padding-left: 5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 4em;
+    font-weight: 800;
+    font-size: 8em;
+}
+
+#bodyBuilding span:first-of-type {
+    color: white;  
+}
+
+#bodyBuilding span:nth-of-type(2){
+    color: #383838;
+}
+
+.subtitle {
+    margin-top: 0;
+    padding-left: 5rem;
+    font-weight: 800;
+    color: white;
+    font-size: 2rem;
+}
+
+.content {
+    padding: 1rem;
+    padding-left: 5rem;
+    margin-bottom: 0;
+    line-height: 2em;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.content:last-of-type {
+    padding-bottom: 5rem;
+}
+
+.image-float {
+    shape-image-threshold: 0.5;
+    shape-margin: 30px;
+    object-fit: cover;
+    object-position: top;
+}
+#bodybuild-float {
+    height: 850px;
+    width: 80%; 
+    float: right;
+    shape-outside: url('/Assets/bodybuilding-cover.png');
+    margin-right: -41%;
+}
+/* Pilates Section Styles */
+#pilates-float {
+    width: 80%;
+    float: left;
+    shape-outside: url('/Assets/pilates-cover.png');
+    margin-left: -10%;
+    margin-top: -10%;
+}
+#pilates .title {
+    text-align: right;
+    padding-right: 2rem;
+}
+#pilates span:first-of-type {
+    color: #B87A16;
+}
+#pilates span:nth-of-type(2) {
+    color: #515050;
+}
+#pilates .subtitle {
+    color: #5D5D5D;
+    text-align: right;
+    padding-right: 2rem;
+}
+#pilates .content {
+    color:#515050;
+    text-align: right;
+    padding-right: 2rem;
+}
+/* Calisthenics Section Styles */
+#calisthenics {
+    background-color: #515050;
+    margin: 0;
+}
+#calisthenics-float {
+    height: 1150px; 
+    width: 50%; 
+    float: right;
+    shape-outside: url('/Assets/calisthenics-cover.png');
+    margin-right: -5%; 
+    margin-top: -10%;
+    object-fit: contain; 
+    object-position: right top;
+}
+#calisthenics span:first-of-type{
+    color: #FFFFFF;
+}
+#calisthenics span:last-of-type{
+    color: #B87A16;
+}
+/* Footer */
+#footer {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    clear: both;
+}
+
+.footer-center p {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-right a {
+    color: white;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: gold;
 }
