@@ -1,0 +1,33 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    min-height: 60px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    filter: brightness(0.4);
+}
+
+#navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: color 0.2s ease-in-out;
+}
