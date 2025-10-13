@@ -3,11 +3,12 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+    margin: 0;
 }
 
 /* Navbar Styles */
 #header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -60,4 +61,44 @@ body {
 #navbar a:hover,
 #navbar a.active {
     color: #EFEA4A;
+}
+
+.news-title {
+    background-color: #b5791a;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+}
+
+.news-title h1, h3{
+    margin: 0;
+    margin-left: 4vw;
+}
+
+.news-title .title1 {
+    color: #fff;
+}
+
+.news-title .title2 {
+    color: #383838;
+}
+
+.news-title h3 {
+    color: white;
+    font-weight: 200;
+    font-size: small;
+}
+
+#news-content {
+    min-height: calc(100vh - 60px - 8vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#news-content img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    display: block;
 }
