@@ -79,3 +79,80 @@ nav a:hover,
 nav a.active {
     color: #EFEA4A;
 }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url("/Assets/main-cover.png") center/cover no-repeat; /* 👈 replace with your image filename */
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 👈 dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 2; /* ensures text appears above overlay */
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    margin-left: -45px;
+}
+
+.hero h1 .highlight {
+    color: #B87A16;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.hero h2 .highlight {
+    color: #C7AD1F;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #EFEA4A;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #EFEA4A;
+    color: #1a1a1a;
+}
