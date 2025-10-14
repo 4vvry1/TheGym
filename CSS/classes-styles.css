@@ -65,6 +65,7 @@ body {
 #navbar a.active {
     color: #EFEA4A;
 }
+
 h1, h2, h3, p {
     margin-top: 0; 
 }
@@ -73,6 +74,25 @@ section {
     padding-top: 2em;
     overflow: hidden;
 }
+
+.menu-checkbox { display: none; }
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle .fa-xmark { display: none; }
+
+.menu-checkbox:checked + .menu-toggle .fa-bars { display: none; }
+.menu-checkbox:checked + .menu-toggle .fa-xmark { display: inline; }
+
+.menu-checkbox:checked ~ #navbar {
+  left: 0;
+}
+
 /* Body Building Section Styles */
 #bodyBuilding {
     background-color: #b5791a;
@@ -124,11 +144,12 @@ section {
     object-position: top;
 }
 #bodybuild-float {
-    height: 850px;
+    overflow-x: visible;
+    height: calc(850px - 1vw);
     width: 80%; 
     float: right;
     shape-outside: url('/Assets/bodybuilding-cover.png');
-    margin-right: -41%;
+    margin-right: calc(-35% - 5vw);
 }
 /* Pilates Section Styles */
 #pilates-float {
@@ -210,4 +231,100 @@ section {
 
 .footer-right a:hover {
     color: gold;
+}
+/* ===== RESPONSIVENESS ===== */
+/* Tablet */
+@media (max-width: 1024px) {
+    .title {
+    font-size: clamp(3rem, 8vw, 8rem);
+    padding-left: 3rem;
+    }
+
+    .subtitle {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    padding-left: 3rem;
+    }
+
+    .content {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    padding-left: 3rem;
+    }
+
+    #pilates .title,
+    #pilates .subtitle,
+    #pilates .content {
+    padding-right: 3rem;
+    }
+    #bodybuild-float {
+        height: 700px;
+        margin-top: 25%;
+    }
+    #calisthenics-float{
+        display: none;
+        /* height: 100%;
+        margin-top: 40%;
+        margin-bottom: 0; */
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  #navbar {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: left 0.3s ease;
+  }
+
+  .menu-checkbox:checked ~ #navbar { left: 0; }
+
+  #navbar a { font-size: 1.5rem; }
+
+  .title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    padding-left: 2rem;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding-left: 2rem;
+  }
+
+  .content {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.6em;
+  }
+
+  .image-float {
+    display: none;
+  }
+
+  #pilates .title {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  #pilates .subtitle,
+  #pilates .content {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: left;
+  }
+  section {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #footer { flex-direction: column; text-align: center; gap: 1rem; }
 }
