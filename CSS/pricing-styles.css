@@ -103,23 +103,44 @@ body {
 }
 
 .program-select select {
-    width: 80%;
-    max-width: 700px;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #b5791a;
-    background-color: #e9e9e9;
-    appearance: none;
-    cursor: pointer;
-    margin-bottom: 3rem;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b5791a;
+  background-color: #e9e9e9;
+  appearance: none;
+  cursor: pointer;
+  margin-bottom: 3rem;
 }
 
 .program-select select:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+}
+
+.program-select {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Custom dropdown arrow */
+.program-select::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-140%);
+    color: #b5791a;
+    pointer-events: none;
+    font-size: 1.5rem;
+    opacity: 0.9;
 }
 
 /* Pricing Cards */
@@ -178,6 +199,92 @@ body {
 .card:hover h2{
     color: #c5ac24;
 }
+
+/* Form */
+#description {
+    font-size: 28px;
+}
+form {
+    width: 60vw;
+    min-width: 300px;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+fieldset {
+    border: none;
+    padding: 2rem;
+}
+label {
+    display: block;
+    margin: 0.3rem 0;
+    font-weight: 500;
+}
+label#favorite-label {
+    padding-top: 1em;
+}
+.inline {
+    width: unset;
+    margin-top: auto;
+    vertical-align: middle;
+}
+input, select {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin: 10px 0 1em 0;
+    padding: 0 10px;
+    width: 100%;
+    min-height: 2em;
+    color: #01012b;
+    border: none;
+    border-bottom: 1px solid #01012b;
+}
+input::placeholder {
+    font-family: 'Inter', sans-serif;
+    color: #7e7e7e;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#radio-p {
+    font-weight: 500;
+}
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+    margin-top: 12px;
+    accent-color: black;
+    cursor: pointer;
+}
+#standard-label, #gold-label, #premium-label {
+    font-weight: 300;
+
+}
+#submit {
+    display: block;
+    background: #333;
+    color: white;
+    max-width: 50%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#submit:hover {
+    background-color: #B87A16;;
+    color: white;;
+}
+
+
+
 
 /* Footer */
 #footer {

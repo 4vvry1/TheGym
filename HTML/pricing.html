@@ -49,22 +49,51 @@
                 <div class="card">
                     <h2>Standard</h2>
                     <p class="price">$10</p>
-                    <button>PAY</button>
+                    <a href="#form"><button>PAY</button></a>
                 </div>
 
                 <div class="card premium">
                     <h2>Premium</h2>
                     <p class="price">$25</p>
-                    <button>PAY</button>
+                    <a href="#form"><button>PAY</button></a>
                 </div>
 
                 <div class="card">
                     <h2>Gold</h2>
                     <p class="price">$15</p>
-                    <button>PAY</button>
+                    <a href="#form"><button>PAY</button></a>
                 </div>
             </div>
         </section>
+
+        <!-- Form Section -->
+        <form id="form" class="inline">
+        <fieldset>
+            <label for="name" id="name-label">Enter your name: </label><input id="name" type="text" placeholder="Your name" pattern="[A-Za-z\s]+"required/>
+            <label for="email" id="email-label">Enter your email: </label><input id="email" type="email" placeholder="Your email" required>
+            <label for="number" id="number-label">Enter your age: </label><input id="number" type="number" placeholder="Your age" min="13" max="120" pattern="[0-9]" required>  
+        </fieldset>
+
+        <fieldset>
+            <label for="dropdown" id="dropdown-label">Choose your card type: </label>
+            <select id="dropdown">
+                <option value="">(Choose an option)</option>
+                <option value="VISA">VISA</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="American Express">American Express</option>
+                <option value="JCB">JCB</option>
+            </select>
+
+        <p id="radio-p">Choose your membership plan: </p>
+            <label for="standard" id="standard-label"><input id="standard" type="radio" name="plan" value="Standard" class="inline" checked/>Standard</label>
+            <label for="gold" id="gold-label"><input id="gold" type="radio" name="plan" value="Gold" class="inline"/>Gold</label>
+            <label for="premium" id="premium-label"><input id="premium" type="radio" name="plan" value="Premium" class="inline"/>Premium</label>
+
+            <label for="card-number" id="number-label">Enter your card number: </label><input id="card-number" type="number" placeholder="Ex. 1234-5678-987" pattern="[0-9]" required>
+        </fieldset>
+
+        <input id="submit" type="submit"/>
+        </form>
 
         <footer id="footer">
             <div class="logo">
