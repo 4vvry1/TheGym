@@ -160,14 +160,14 @@ section {
     height: calc(850px - 1vw);
     width: 80%; 
     float: right;
-    shape-outside: url('/Assets/bodybuilding-cover.png');
+    shape-outside: url('../Assets/bodybuilding-cover.png');
     margin-right: calc(-35% - 5vw);
 }
 /* Pilates Section Styles */
 #pilates-float {
     width: 80%;
     float: left;
-    shape-outside: url('/Assets/pilates-cover.png');
+    shape-outside: url('../Assets/pilates-cover.png');
     margin-left: -10%;
     margin-top: -10%;
 }
@@ -200,7 +200,7 @@ section {
     height: 1150px; 
     width: 50%; 
     float: right;
-    shape-outside: url('/Assets/calisthenics-cover.png');
+    shape-outside: url('../Assets/calisthenics-cover.png');
     margin-right: -5%; 
     margin-top: -10%;
     object-fit: contain; 

@@ -101,7 +101,7 @@ body {
 /* Hero */
 .hero {
     height: 100vh;
-    background: url("/Assets/main-cover.png") center/cover no-repeat; /* 👈 replace with your image filename */
+    background: url("../Assets/main-cover.png") center/cover no-repeat; /* 👈 replace with your image filename */
     display: flex;
     align-items: center;
     padding: 0 50px;
@@ -194,7 +194,7 @@ body {
 .about-image {
     width: 100%;
     height: 420px;
-    background: url("/Assets/push-up.jpg") center/cover no-repeat;
+    background: url("../Assets/push-up.jpg") center/cover no-repeat;
     border-radius: 10px;
 }
 
@@ -234,7 +234,7 @@ body {
 .stats-image {
     width: 100%;
     height: 440px;
-    background: url("/Assets/stats.png") center/cover no-repeat;
+    background: url("../Assets/stats.png") center/cover no-repeat;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -297,15 +297,15 @@ body {
 }
 
 .program-card:nth-child(1) .program-image {
-    background: url("/Assets/bodybuilding.jpg") center/cover no-repeat;
+    background: url("../Assets/bodybuilding.jpg") center/cover no-repeat;
 }
 
 .program-card:nth-child(2) .program-image {
-    background: url("/Assets/pilates.jpg") center/cover no-repeat;
+    background: url("../Assets/pilates.jpg") center/cover no-repeat;
 }
 
 .program-card:nth-child(3) .program-image {
-    background: url("/Assets/calisthenics.jpg") center/cover no-repeat;
+    background: url("../Assets/calisthenics.jpg") center/cover no-repeat;
 }
 
 
@@ -383,7 +383,7 @@ body {
     height: 400px;
     background: #ddd;
     border-radius: 10px;
-    background: url("/Assets/mission.jpg") center/cover no-repeat;
+    background: url("../Assets/mission.jpg") center/cover no-repeat;
 }
 
 /* Footer */
